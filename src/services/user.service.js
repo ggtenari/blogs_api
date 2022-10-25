@@ -8,4 +8,23 @@ const getUser = async (userDate) => {
   return user;
 };
 
-module.exports = { getUser };
+const createUser = async (userDate) => {
+  const newUser = await User.create({
+    displayName: userDate.displayName,
+    email: userDate.email,
+    password: userDate.password,
+    image: userDate.image,
+  });
+
+  return newUser;
+};
+
+const getUserByEmail = async (email) => {
+  const user = await User.findOne({
+    where: { email },
+  });
+
+  return user;
+};
+
+module.exports = { getUser, createUser, getUserByEmail };
