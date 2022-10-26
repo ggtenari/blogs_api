@@ -6,6 +6,10 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     name: DataTypes.STRING,
+  },{
+    timestamps: false,
+    tableName: 'categories',
+    underscored: true,
   })
 
   return Category;
