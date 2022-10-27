@@ -22,6 +22,7 @@ app.post('/post', jwtValidation, blogPostController.publishPost);
 app.get('/post', jwtValidation, blogPostController.getAllPosts);
 app.get('/post/:id', jwtValidation, blogPostController.getPostById);
 app.put('/post/:id', jwtValidation, blogPostController.updatePost);
+app.delete('/post/:id', jwtValidation, blogPostController.deletePost);
 
 // É importante exportar a constante `app`,
 // para que possa ser utilizada pelo arquivo `src/server.js`
