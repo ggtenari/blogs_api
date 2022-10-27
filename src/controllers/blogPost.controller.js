@@ -16,6 +16,16 @@ const publishPost = async (req, res) => {
   res.status(201).json(post);
 };
 
+const getAllPosts = async (req, res) => {
+  try {
+    const posts = await blogPostService.getAllPosts();
+    res.status(200).json(posts);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   publishPost,
+  getAllPosts,
 };
