@@ -38,4 +38,12 @@ const getAllPosts = async () => {
   return posts;
 };
 
-module.exports = { publishPost, getAllPosts };
+const getPostById = async (id) => {
+  const post = BlogPost.findOne({ where: { id }, 
+    include: [{ model: User, as: 'user', attributes: { exclude: ['password'] } }, 
+    { model: Category, as: 'categories', through: { attributes: [] } }] });
+
+  return post;
+};
+
+module.exports = { publishPost, getAllPosts, getPostById };

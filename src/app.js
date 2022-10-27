@@ -19,7 +19,8 @@ app.get('/user/:id', jwtValidation, userController.getUserById);
 app.post('/categories', jwtValidation, categoryController.createCategory);
 app.get('/categories', jwtValidation, categoryController.getAllCategories);
 app.post('/post', jwtValidation, blogPostController.publishPost);
-app.get('/post/', jwtValidation, blogPostController.getAllPosts);
+app.get('/post', jwtValidation, blogPostController.getAllPosts);
+app.get('/post/:id', jwtValidation, blogPostController.getPostById);
 
 // É importante exportar a constante `app`,
 // para que possa ser utilizada pelo arquivo `src/server.js`
