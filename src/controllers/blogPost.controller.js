@@ -76,8 +76,19 @@ const deletePost = async (req, res) => {
   }
 };
 
+const getPostByTerm = async (req, res) => {
+  const term = req.query.q;
+  try {
+    const posts = await blogPostService.getPostByTerm(term);
+    res.status(200).json(posts);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 module.exports = {
   publishPost,
+  getPostByTerm,
   deletePost,
   updatePost,
   getPostById,
