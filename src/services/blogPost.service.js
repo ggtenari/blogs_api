@@ -32,9 +32,9 @@ const publishPost = async (post, user) => {
 
 const getAllPosts = async () => {
   const posts = BlogPost
-  .findAll({ include: [
-    { model: User, as: 'user', attributes: { exclude: ['password'] } }, 
-    { model: Category, as: 'categories', through: { attributes: [] } }] });
+    .findAll({ include: [
+      { model: User, as: 'user', attributes: { exclude: ['password'] } }, 
+      { model: Category, as: 'categories', through: { attributes: [] } }] });
   return posts;
 };
 
@@ -46,4 +46,14 @@ const getPostById = async (id) => {
   return post;
 };
 
-module.exports = { publishPost, getAllPosts, getPostById };
+const updatePost = async (id, post) => {
+  const updatedPost = await BlogPost
+    .update({ title: post.title, content: post.content }, { where: { id },
+      include: [{ model: User, as: 'user', attributes: { exclude: ['password'] } }, 
+      { model: Category, as: 'categories', through: { attributes: [] } }],
+     });
+
+  return updatedPost;
+};
+
+module.exports = { publishPost, getAllPosts, getPostById, updatePost };
