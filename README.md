@@ -28,7 +28,6 @@ Para inicializar o projeto em sua máquina:
 
   > :information_source: Rode o script `npm start`. Este irá iniciar a API na porta estipulada pelo arquivo `docker-compose.yml`
 
-    <br />
 
     ## 👉 Sem Docker
 
