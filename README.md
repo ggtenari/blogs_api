@@ -1,4 +1,4 @@
-Para inicializar o projeto em sua maquina:
+Para inicializar o projeto em sua máquina:
 
 <details>
   <summary><strong>🐋 Rodando no Docker vs Localmente</strong></summary>
@@ -23,6 +23,10 @@ Para inicializar o projeto em sua maquina:
   > :information_source: Instale as dependências [**Caso existam**] com `npm install`. (Instale dentro do container)
   
   - **:warning: Atenção:** Caso opte por utilizar o Docker, **TODOS** os comandos disponíveis no `package.json` (npm start, npm test, npm run dev, ...) devem ser executados **DENTRO** do container, ou seja, no terminal que aparece após a execução do comando `docker exec` citado acima. 
+
+  > :information_source: Rode os scripts `npm run prestart` seguido de `npm run seed`, estes scripts irão criar e popular o banco de dados da aplicação.
+
+  > :information_source: Rode o script `npm start`. Este irá iniciar a API na porta estipulada pelo arquivo `docker-compose.yml`
 
     <br />
 
