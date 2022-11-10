@@ -29,3 +29,6 @@ Para inicializar o projeto em sua maquina:
     ## 👉 Sem Docker
 
   > :information_source: Instale as dependências [**Caso existam**] com `npm install`
+  > :information_source: Configure o arquivo .env na pasta raiz do projeto com as variáveis de ambiente respectivas. (Há um arquivo '.env.example' que possui exemplos de como configurar o arquivo.)
+  > :information_source: Rode os scripts 'npm run prestart' seguido de 'npm run seed', estes scripts irão criar e popular o banco de dados da aplicação.
+  > :information_source: Rode o script 'npm start'. Este irá iniciar a API na porta estipulada pelo arquivo '.env'.
