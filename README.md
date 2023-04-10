@@ -1,3 +1,5 @@
+Este projeto consiste em uma API responsável pelo CRUD de um blog feita em volta do modelo MSC.
+
 Para inicializar o projeto em sua máquina:
 
 <details>
