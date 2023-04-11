@@ -4,6 +4,8 @@ As principais tecnologias utilizadas no projeto são: MySQL, Sequelize, Node.js 
 
 ### Para inicializar o projeto em sua máquina:
 
+Todos os comandos descritos abaixo devem ser executados dentro da pasta raíz do projeto, após ser feito o clone do repositório com o comando `git clone `
+
 <details>
   <summary><strong>🐋 Rodando no Docker vs Localmente</strong></summary>
   
