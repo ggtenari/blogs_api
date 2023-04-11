@@ -2,7 +2,7 @@ Este projeto consiste em uma API responsável pelo CRUD de um blog feita em volt
 
 As principais tecnologias utilizadas no projeto são: MySQL, Sequelize, Node.js e JavaScript.
 
-Para inicializar o projeto em sua máquina:
+### Para inicializar o projeto em sua máquina:
 
 <details>
   <summary><strong>🐋 Rodando no Docker vs Localmente</strong></summary>
